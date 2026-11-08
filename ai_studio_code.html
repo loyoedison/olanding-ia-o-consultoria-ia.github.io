@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Synapse AI | Consultoría en Automatización con Inteligencia Artificial</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              dark: '#070D1E',      /* Azul oscuro principal */
+              surface: '#0D1730',   /* Azul contenedor/tarjeta */
+              border: '#1B2A52',    /* Borde sutil */
+              celeste: '#38BDF8',   /* Celeste acento */
+              celesteGlow: '#7DD3FC',/* Celeste gaussiano luminoso */
+              light: '#F8FAFC'      /* Blanco texto */
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Efecto Gaussian Blur de fondo */
+    .glow-celeste {
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.18) 0%, rgba(7, 13, 30, 0) 70%);
+      filter: blur(60px);
+    }
+  </style>
+</head>
+
+<body class="bg-brand-dark text-slate-300 font-sans antialiased selection:bg-brand-celeste selection:text-brand-dark">
+
+  <!-- ==================== NAVEGACIÓN ==================== -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-brand-dark/80 backdrop-blur-md border-b border-brand-border/50">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <!-- Logo con destello celeste -->
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-celeste to-white flex items-center justify-center shadow-[0_0_20px_rgba(56,189,248,0.4)]">
+          <svg class="w-6 h-6 text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+        </div>
+        <span class="text-xl font-bold tracking-tight text-brand-light">Synapse<span class="text-brand-celeste">.AI</span></span>
+      </div>
+
+      <!-- Enlaces Menú (Desktop) -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a href="#beneficios" class="hover:text-brand-celeste transition-colors">Beneficios</a>
+        <a href="#testimonios" class="hover:text-brand-celeste transition-colors">Casos de Éxito</a>
+        <a href="#newsletter" class="hover:text-brand-celeste transition-colors">Newsletter</a>
+      </nav>
+
+      <!-- Botón Header -->
+      <a href="#newsletter" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-full text-sm font-semibold text-brand-dark bg-white hover:bg-brand-celeste transition-all duration-300 shadow-[0_0_15px_rgba(255,255,255,0.2)]">
+        Contactar Ahora
+      </a>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="relative pt-36 pb-24 md:pt-48 md:pb-36 overflow-hidden">
+    <!-- Círculos de luz gaussiana decorativos -->
+    <div class="glow-celeste absolute -top-20 left-1/2 -translate-x-1/2 w-[600px] h-[400px] pointer-events-none rounded-full"></div>
+    <div class="glow-celeste absolute top-80 -right-20 w-[400px] h-[400px] pointer-events-none rounded-full opacity-60"></div>
+
+    <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+      
+      <!-- Pill Badge -->
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-surface border border-brand-border mb-8 shadow-sm">
+        <span class="w-2 h-2 rounded-full bg-brand-celeste animate-pulse shadow-[0_0_10px_#38bdf8]"></span>
+        <span class="text-xs uppercase tracking-wider font-semibold text-brand-celesteGlow">Consultoría en IA & Flujos Autónomos</span>
+      </div>
+
+      <!-- Titular Principal -->
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.15] mb-8">
+        Escala tu negocio eliminando tareas manuales con <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-celeste via-brand-celesteGlow to-white">Inteligencia Artificial</span>
+      </h1>
+
+      <!-- Subtítulo -->
+      <p class="max-w-2xl mx-auto text-lg sm:text-xl text-slate-400 font-normal leading-relaxed mb-10">
+        Diseñamos arquitecturas de automatización e implementamos agentes inteligentes que reducen tus costos operativos hasta un 65% y liberan el potencial de tu equipo.
+      </p>
+
+      <!-- Botón Principal Call to Action -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#newsletter" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full font-bold text-base text-brand-dark bg-brand-celeste hover:bg-brand-celesteGlow transition-all duration-300 shadow-[0_0_25px_rgba(56,189,248,0.5)] transform hover:-translate-y-0.5">
+          Comenzar Diagnóstico Gratuito
+          <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </a>
+      </div>
+
+      <!-- Métricas de Confianza -->
+      <div class="pt-16 mt-16 border-t border-brand-border/60 grid grid-cols-2 md:grid-cols-3 gap-6 max-w-3xl mx-auto text-left">
+        <div>
+          <p class="text-3xl font-extrabold text-white">+120k</p>
+          <p class="text-xs text-slate-400 uppercase tracking-wider mt-1">Horas hombre ahorradas</p>
+        </div>
+        <div>
+          <p class="text-3xl font-extrabold text-white">4.8x</p>
+          <p class="text-xs text-slate-400 uppercase tracking-wider mt-1">Retorno de inversión prom.</p>
+        </div>
+        <div class="col-span-2 md:col-span-1">
+          <p class="text-3xl font-extrabold text-brand-celeste">99.9%</p>
+          <p class="text-xs text-slate-400 uppercase tracking-wider mt-1">Precisión de datos en flujos</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== 3 BENEFICIOS ==================== -->
+  <section id="beneficios" class="py-24 relative">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-xs uppercase tracking-widest text-brand-celeste font-bold mb-3">Soluciones de Alto Impacto</h2>
+        <h3 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Beneficios diseñados para la rentabilidad de tu empresa</h3>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Beneficio 1 -->
+        <div class="bg-brand-surface/80 border border-brand-border hover:border-brand-celeste/50 rounded-2xl p-8 transition-all duration-300 hover:shadow-[0_0_30px_rgba(56,189,248,0.15)] flex flex-col">
+          <div class="w-14 h-14 rounded-xl bg-brand-dark border border-brand-border flex items-center justify-center text-brand-celeste mb-6 shadow-inner">
+            <!-- Icono Engranajes / Procesos -->
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <h4 class="text-xl font-bold text-white mb-3">Automatización de Procesos End-to-End</h4>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Conectamos tu CRM, correo, bases de datos y herramientas internas en flujos que funcionan de forma 100% autónoma sin errores humanos.
+          </p>
+        </div>
+
+        <!-- Beneficio 2 -->
+        <div class="bg-brand-surface/80 border border-brand-border hover:border-brand-celeste/50 rounded-2xl p-8 transition-all duration-300 hover:shadow-[0_0_30px_rgba(56,189,248,0.15)] flex flex-col">
+          <div class="w-14 h-14 rounded-xl bg-brand-dark border border-brand-border flex items-center justify-center text-brand-celeste mb-6 shadow-inner">
+            <!-- Icono Agente / Cerebro -->
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h4 class="text-xl font-bold text-white mb-3">Agentes IA Entrenados con tu Data</h4>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Implementamos modelos de lenguaje personalizados que resuelven consultas técnicas, atienden leads calificados y generan reportes en segundos.
+          </p>
+        </div>
+
+        <!-- Beneficio 3 -->
+        <div class="bg-brand-surface/80 border border-brand-border hover:border-brand-celeste/50 rounded-2xl p-8 transition-all duration-300 hover:shadow-[0_0_30px_rgba(56,189,248,0.15)] flex flex-col">
+          <div class="w-14 h-14 rounded-xl bg-brand-dark border border-brand-border flex items-center justify-center text-brand-celeste mb-6 shadow-inner">
+            <!-- Icono Crecimiento Financiero -->
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+            </svg>
+          </div>
+          <h4 class="text-xl font-bold text-white mb-3">Ahorro y Retorno de Inversión Rápido</h4>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Priorizamos proyectos con entrega de valor en menos de 30 días, asegurando que cada dólar invertido genere impacto contable comprobable.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TESTIMONIOS ==================== -->
+  <section id="testimonios" class="py-24 bg-brand-surface/40 relative">
+    <div class="glow-celeste absolute bottom-0 left-10 w-[350px] h-[350px] pointer-events-none rounded-full opacity-40"></div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-xs uppercase tracking-widest text-brand-celeste font-bold mb-3">Testimonios</h2>
+        <h3 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Lo que dicen los líderes que ya transformaron sus operaciones</h3>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Testimonio 1 -->
+        <div class="bg-brand-surface border border-brand-border rounded-2xl p-8 flex flex-col justify-between">
+          <div>
+            <div class="flex text-brand-celeste gap-1 mb-4">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+              "Automatizaron todo nuestro embudo de soporte y facturación con agentes IA. Redujimos el tiempo de respuesta de 3 horas a 45 segundos sin contratar personal extra."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-brand-border">
+            <div class="w-10 h-10 rounded-full bg-brand-celeste/20 text-brand-celeste font-bold flex items-center justify-center text-sm border border-brand-celeste/40">
+              MR
+            </div>
+            <div>
+              <h5 class="text-sm font-semibold text-white">Mateo Rivas</h5>
+              <p class="text-xs text-slate-400">Director de Operaciones, LogisTech</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonio 2 -->
+        <div class="bg-brand-surface border border-brand-border rounded-2xl p-8 flex flex-col justify-between">
+          <div>
+            <div class="flex text-brand-celeste gap-1 mb-4">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+              "El acompañamiento de la consultoría fue impecable. No sólo crearon las herramientas, sino que capacitaron a nuestro equipo para sacarles el máximo provecho."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-brand-border">
+            <div class="w-10 h-10 rounded-full bg-brand-celeste/20 text-brand-celeste font-bold flex items-center justify-center text-sm border border-brand-celeste/40">
+              VC
+            </div>
+            <div>
+              <h5 class="text-sm font-semibold text-white">Valeria Carvajal</h5>
+              <p class="text-xs text-slate-400">CEO, Nexus Consultores</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonio 3 -->
+        <div class="bg-brand-surface border border-brand-border rounded-2xl p-8 flex flex-col justify-between">
+          <div>
+            <div class="flex text-brand-celeste gap-1 mb-4">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+              "Pensábamos que la IA era sólo para gigantes tecnológicos. En 3 semanas teníamos automatizada la extracción de datos de 5,000 contratos al mes."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-brand-border">
+            <div class="w-10 h-10 rounded-full bg-brand-celeste/20 text-brand-celeste font-bold flex items-center justify-center text-sm border border-brand-celeste/40">
+              GA
+            </div>
+            <div>
+              <h5 class="text-sm font-semibold text-white">Gabriel Acosta</h5>
+              <p class="text-xs text-slate-400">Gerente de Finanzas, BPO Global</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FORMULARIO NEWSLETTER / REGISTRO ==================== -->
+  <section id="newsletter" class="py-24 relative overflow-hidden">
+    <!-- Luz gaussiana centrada en el formulario -->
+    <div class="glow-celeste absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] pointer-events-none rounded-full"></div>
+
+    <div class="max-w-3xl mx-auto px-6 relative z-10">
+      
+      <div class="bg-brand-surface/90 border border-brand-border/90 rounded-3xl p-8 sm:p-12 shadow-[0_15px_40px_rgba(0,0,0,0.4)] backdrop-blur-xl">
+        
+        <div class="text-center mb-8">
+          <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold text-brand-celeste bg-brand-celeste/10 border border-brand-celeste/30 mb-3">
+            Únete a nuestra Comunidad
+          </span>
+          <h3 class="text-2xl sm:text-3xl font-extrabold text-white">Suscríbete a nuestro Newsletter Exclusivo</h3>
+          <p class="text-slate-400 text-sm mt-2 max-w-md mx-auto">
+            Recibe semanalmente guías de automatización, casos de estudio prácticos y las últimas novedades en Inteligencia Artificial aplicada.
+          </p>
+        </div>
+
+        <!-- Formulario (Listo para conectar a backend en el futuro) -->
+        <form id="leadForm" onsubmit="handleFormSubmit(event)" class="space-y-5">
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <!-- NOMBRE -->
+            <div>
+              <label for="nombre" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Nombre</label>
+              <input 
+                type="text" 
+                id="nombre" 
+                name="nombre" 
+                required 
+                placeholder="Ej. Carlos" 
+                class="w-full px-4 py-3 rounded-xl bg-brand-dark border border-brand-border text-white placeholder-slate-500 focus:outline-none focus:border-brand-celeste focus:ring-1 focus:ring-brand-celeste transition-colors text-sm"
+              >
+            </div>
+
+            <!-- APELLIDO -->
+            <div>
+              <label for="apellido" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Apellido</label>
+              <input 
+                type="text" 
+                id="apellido" 
+                name="apellido" 
+                required 
+                placeholder="Ej. Mendoza" 
+                class="w-full px-4 py-3 rounded-xl bg-brand-dark border border-brand-border text-white placeholder-slate-500 focus:outline-none focus:border-brand-celeste focus:ring-1 focus:ring-brand-celeste transition-colors text-sm"
+              >
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <!-- TELÉFONO -->
+            <div>
+              <label for="telefono" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Teléfono</label>
+              <input 
+                type="tel" 
+                id="telefono" 
+                name="telefono" 
+                required 
+                placeholder="+593 99 999 9999" 
+                class="w-full px-4 py-3 rounded-xl bg-brand-dark border border-brand-border text-white placeholder-slate-500 focus:outline-none focus:border-brand-celeste focus:ring-1 focus:ring-brand-celeste transition-colors text-sm"
+              >
+            </div>
+
+            <!-- CORREO -->
+            <div>
+              <label for="correo" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Correo Electrónico</label>
+              <input 
+                type="email" 
+                id="correo" 
+                name="correo" 
+                required 
+                placeholder="carlos@empresa.com" 
+                class="w-full px-4 py-3 rounded-xl bg-brand-dark border border-brand-border text-white placeholder-slate-500 focus:outline-none focus:border-brand-celeste focus:ring-1 focus:ring-brand-celeste transition-colors text-sm"
+              >
+            </div>
+          </div>
+
+          <!-- BOTÓN DE ENVÍO -->
+          <div class="pt-3">
+            <button 
+              type="submit" 
+              class="w-full py-4 px-6 rounded-xl font-bold text-sm text-brand-dark bg-white hover:bg-brand-celeste text-center transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.25)] flex items-center justify-center gap-2"
+            >
+              <span>Quiero Recibir el Contenido</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Mensaje de Feedback Visual -->
+          <div id="formFeedback" class="hidden p-4 rounded-xl bg-brand-celeste/10 border border-brand-celeste/40 text-brand-celeste text-center text-sm">
+            ✨ ¡Datos registrados exitosamente! Nos pondremos en contacto muy pronto.
+          </div>
+
+          <p class="text-center text-xs text-slate-500 mt-4">
+            Respetamos tu privacidad. Cero spam, solo contenido estratégico sobre IA.
+          </p>
+
+        </form>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="border-t border-brand-border py-12 bg-brand-dark">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
+      
+      <div class="flex items-center gap-2">
+        <div class="w-7 h-7 rounded-lg bg-brand-celeste flex items-center justify-center text-brand-dark font-bold text-xs">
+          S
+        </div>
+        <span class="text-sm font-semibold text-white">Synapse AI Consulting</span>
+      </div>
+
+      <p class="text-xs text-slate-500">
+        &copy; 2026 Synapse AI. Todos los derechos reservados.
+      </p>
+
+      <div class="flex items-center gap-6 text-xs text-slate-400">
+        <a href="#" class="hover:text-brand-celeste transition-colors">Privacidad</a>
+        <a href="#" class="hover:text-brand-celeste transition-colors">Términos</a>
+        <a href="#" class="hover:text-brand-celeste transition-colors">Contacto</a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==================== SCRIPT DEMO VISUAL ==================== -->
+  <script>
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      
+      // Simulación de envío visual para testing
+      const feedback = document.getElementById('formFeedback');
+      feedback.classList.remove('hidden');
+
+      // Limpia campos visualmente (opcional)
+      setTimeout(() => {
+        document.getElementById('leadForm').reset();
+      }, 500);
+
+      // Aquí podrás agregar en el siguiente paso tu fetch() hacia tu API / Supabase / Firebase / Webhook
+    }
+  </script>
+
+</body>
+</html>
